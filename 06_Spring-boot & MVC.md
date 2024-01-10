@@ -49,12 +49,15 @@
         - 3가지 절차를 수행 : Loading → Linking → Initialization
     - **2. Runtime Data Area** (JVM 메모리)
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/d6a64ebe-ed37-48a9-adf3-caf54b16d12e/Untitled.png)
+        ![Untitled](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/0b99f3ca-1b81-4f95-8fee-b84827a561f8)
+
         
         - **공유 영역** (모든 Thread 가 공유)
             - **Heap** : 객체(인스턴스, 배열) 저장 ← **Garbage Collection 의 대상**
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/74e3c969-1466-4473-8dad-1ff0a822fe0b/Untitled.png)
+               <img width="568" alt="Untitled (3)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/ec29180d-c903-4969-b6bc-6652f7a85601">
+
+
                 
                 - **Young/New Generation** ⇒ **Minor GC** 대상 (높은 주기, 짧은 시간)
                     
@@ -86,7 +89,9 @@
             - **JIT 컴파일러** : 실행이 잦은 Bytecode → 기계어로 미리 컴파일해놓는것
         - Runtime Data Area 에 **적재된걸 정리** : **Garbage Collection**
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/4b979949-e658-4a71-9ebf-242424c3e0d7/Untitled.png)
+    ![Untitled](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/b709806d-03a4-4447-9cd2-f2abec18b8cf)
+
+
     
     ### **디자인 패턴 및 객체지향 설계원칙 SOLID**
     
@@ -111,7 +116,8 @@
             - ‘상속’ 이 아닌 인터페이스 ‘구성’ 시 원하는 구현을 붙였다 떼었다 할 수 있다.
     - 디자인 패턴 종류
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/5048e29c-36c4-4ccc-8bce-dac8a5f19341/Untitled.png)
+        ![Untitled (2)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/b8daf69b-c9ea-4f48-9c08-05adcd71f513)
+
         
         - 생성(Creational) 패턴
             - 추상 팩토리
@@ -182,7 +188,8 @@
     - 아니면 **어떤 주체**가 객체가 필요할때, 객체를 생성하여 필요한곳에 주입해줄것인가?
         - 제어 역전 구현 방법 5가지
             
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/84ff2497-6e0d-4338-b578-592041361bf8/Untitled.png)
+            ![Untitled (4)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/8f3daef2-0baf-4f1e-b03a-690489c1a71b)
+
             
             - Template Pattern : 추상 클래스 부분 구현
             - Delegate : 위임 (실행 결과를 받는것까지 모두 위임, 자기 자신을 보낸다)
@@ -191,11 +198,13 @@
                 - Service Locator 와 DI 의 차이, 그림으로 이해하기
                     - **Service Locator : 주입하는것**
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/8ec527ed-7620-4bab-9680-18cea708e9ef/Untitled.png)
+                    ![Untitled (5)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/5c9d4e2b-ab32-453e-91c7-08362520cd24)
+
                     
                     - **DI(Dependancy Injection) : 주입되는것**
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/9aebf4ac-4dfa-4f83-b3c7-cc5a03bba99f/Untitled.png)
+                    ![Untitled (6)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/2d650afe-004b-4c9f-acc8-4ff86c3daa19)
+
                     
             - **DI(Dependancy Injection) 의존성 주입** : Container 가 Bean 직접 **주입해주는것**
                 
@@ -295,12 +304,14 @@
     
     - **Library** : 개발자는 필요한 Library 들을 **선택하고, 연결하고, 설정하는** 모든걸 다 직접 해야함
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/4cad8b18-5471-43ad-9f33-859c66fbb6ac/Untitled.png)
+       ![Untitled (7)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/d32083fd-0d63-4851-997b-dc8ff6c2915c)
+
         
     - **Framework** : 개발자가 직접 구현한것 혹은 Library 들을 **연결하고, 설정하는** 것들을 제공
         - 그렇기때문에 Framework 는 개발자에게 **“비지니스 구현”** 만 신경쓰도록 만들 수 있는것
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/becf61ea-9783-4d1e-8cd3-175d0249ff02/Untitled.png)
+        ![Untitled (8)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/fec6074c-bd9c-43b6-9d47-6a2ef22516e3)
+
         
     
     ---
@@ -368,7 +379,8 @@
                 - Controller 는 View name 및 **Model** 을 반환
             - View name 에 알맞은 View Template 를 찾아서 Model 과 결합하며 **View 생성**
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/133daea9-40e6-4441-bf67-c1fcd234b867/Untitled.png)
+       ![Untitled (8)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/acc3f231-9a43-4b83-b5b7-e7b361b88b0f)
+
         
     - **3 계층 아키텍쳐 패턴** : 상세 구현에서 관심사의 분리
         - **Presentation Layer** : 앞서 설명한 MVC 아키텍쳐 패턴
@@ -402,13 +414,15 @@
                     - POST `/hello` → HelloPostSerlvet
                     - DELETE `/world` → WorldDeleteSerlvet
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/09861573-43aa-49ee-8524-74cdc5971d60/Untitled.png)
+                    ![Untitled (10)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/db607288-2edb-47dd-90be-943187e03229)
+
                     
         - **Front Controller 적용된 Servlet : Spring 시절**
             - Spring 에서는 Servlet 을 URL 마다 정의하지 않고, 단일 Serlvet 만을 사용
                 - * → **DispatcherSerlvet**
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/de4290c6-c768-49c8-882a-4dec88839ae8/Untitled.png)
+                ![Untitled (11)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/f1801c9c-4135-49cc-83b0-98c072e40f91)
+
                 
             - 왜 Front Controller 가 필요한가? ⇒ **중앙화 = 중앙처리 + 중앙관리**
                 1. Controller 호출의 **중앙화**
@@ -447,9 +461,11 @@
                         - @Compoentn
                         - @Configuration 등
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/422a8a78-3698-472c-9dda-15b5df4e77b0/Untitled.png)
+                    ![Untitled (12)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/e76c02fb-0f20-439c-8001-6a32097fc67f)
+
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/6a615a73-1759-4795-b15d-8233d2473a0d/Untitled.png)
+                    ![Untitled (13)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/a81fe6a7-93c3-4292-9d3a-1aae437cef59)
+
                     
         2. Tomcat 및 Container 들이 모두 생성된 뒤에는 클라이언트 요청을 받을 수 있다.
         3. 클라이언트 요청에 따라 Tomcat 은 정적 페이지가 존재하는지 확인
@@ -503,8 +519,8 @@
                         - JSP, Thymleaf 등 다양. 현재 Spring 표준은 **Thymleaf**
                         - **Thymeleaf** 는 다른 템플릿 기술과 달리 HTML 형태로 프로토타입 확인가능
                         
-                        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/9f203e78-4a17-48c5-8fa8-bc5f1c3d5882/Untitled.png)
-                        
+                        <img width="697" alt="Untitled (14)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/633bbd4e-652d-4cf0-8665-f38f49f576ea">
+
                     - Client-side Template Engine
                         - React, Vue 등
         6. 최종적으로 View 가 클라이언트에게 반환된다.
@@ -544,11 +560,13 @@
                 ```
                 
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/d6bc8551-a1da-42cf-adf8-2a6a39a52b51/Untitled.png)
+    ![Untitled (15)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/26fc045f-b080-4382-ad91-729aa75aeca6)
+
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/8c680017-aca3-4988-bb69-909fa88ccede/Untitled.png)
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/acdac76d-7557-4e6d-831a-3e853799a5ad/Untitled.png)
+    ![Untitled (16)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/9938e54c-5a91-4302-a9d0-7a5e868cf99c)
+
+    ![Untitled (17)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/4e76f2a3-dfa7-4e5c-88a2-fc6638583368)
+
     
     - **DTO (Data Transfer Object) 는 무엇인가? = 그냥 데이터 담은 객체 (가변성)**
         
@@ -831,15 +849,17 @@
                     - 1차 캐시 : (Hibernate Session) **Transaction-level Cache** of persistent data
                     - 2차 캐시 : **SessionFactory-level cache**
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/0e102981-b4aa-4c4e-8fa7-99621128d0b5/Untitled.png)
+                   ![Untitled (18)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/7c0b5272-8949-43c9-b998-beb83d00d278)
+
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/7376d94f-cfe8-425b-bdc3-81a51d9908ad/Untitled.png)
-                    
+                    ![Untitled (19)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/20941de5-d8e3-4529-a955-12cb21e78abb)
+
                 - 2차 캐시를 적정히 활용하면 데이터베이스 조회 횟수를 획기적으로 줄일 수 있다.
             - **2차 캐시를 사용할 경우 Hibernate SQL 로깅이 찍히지 않는다.**
                 - **JPA 가 요청을 날리지 않기 때문 ([Baeldung 출처](https://www.baeldung.com/hibernate-second-level-cache#Cacheable))**
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/2ca8f028-98e1-4e71-8ffe-b4454220219d/Untitled.png)
+                    <img width="998" alt="Untitled (21)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/ec5158da-dc6b-45a7-aa4a-af3dec63cb23">
+
                     
     - **Persistence Context (영속성 컨텍스트) 이점**
         - ****동일성 보장 (Identity)****
@@ -861,7 +881,8 @@
                 - 표준 SQL 인 **ANSI SQL** 을 기반으로, DBMS 각자 **독자적인 기능**을 위해 **추가 SQL** 존재
                     - PL/SQL (Oracle), PL/pgSQL (PostgresQL), T-SQL (MS-SQL) 등
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/1ae5522f-1305-4b35-bf5d-9610fe4394a3/Untitled.png)
+                    ![Untitled (20)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/2619d6a0-a2fd-4bcb-92dc-fd00794edb5f)
+
                     
                 - JPA 에서 **Dialect 만 설정해주면 해당 Dialect 를 참고하여 그에 맞는 쿼리를 생성**
                     
@@ -890,7 +911,8 @@
                 - **준영속** (Detached) : 영속성 컨텍스트에 저장되었다가 **분리된 상태**
                 - **삭제** (Removed) : **삭제된 상태**
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/e0309e83-ae6b-46cd-88fd-c1a9062f01ed/Untitled.png)
+                ![Untitled (22)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/bf22935b-fe93-4caf-8bcb-cd5d930ddbee)
+
                 
                 - **Entity 생명주기 상태를 변경하는 EntityManager 의 메서드들**
                     - em.**find**() : 엔티티 조회
@@ -1006,7 +1028,8 @@
             
     - **JPA vs Spring Data JPA** 차이에 대한 그림
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/b4d29c71-e98b-42b8-9f15-08d563960869/Untitled.png)
+        ![Untitled (23)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/780b650b-1328-4c3e-9384-5adb1ef8bc89)
+
         
     
     ### 1.1. Query Method 기능
@@ -1218,12 +1241,14 @@
         - Enum 내 String → Enum 변환 **정적 메서드**
             - **이전** : null 을 반환하고, `from()` 메서드 **외부에서 Exception 발생**
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/e907454a-1b63-432f-9a88-3622b590bb77/Untitled.png)
+                <img width="502" alt="Untitled (24)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/44687824-0b1d-48ea-8c79-09b69f9f8e43">
+
                 
             - **이후** : **String** 에 해당하는 **Enum** 이 존재하지 않는 경우 **내부에서 Exception 발생**
                 - Enum 미존재 Exception 은 String → Enum 변환 로직과 분리될 수 없다.
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/8a71dbd2-1470-487f-a5eb-daf4e0317276/Untitled.png)
+               <img width="549" alt="Untitled (25)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/168d1c4b-7228-4105-84a0-fc017ca139ff">
+
                 
         
         ### @RequestBody 의 Null + Validation 처리
@@ -1234,12 +1259,14 @@
         - **유효한 날짜인지 여부를 검사**한다.
             - **이전** : 이 모든 로직들이 아래 코드에서 **약 16줄의 라인을 차지한다.**
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/ee7ca79d-31fb-4a1e-a211-eb03e941fd80/Untitled.png)
+                <img width="863" alt="Untitled (26)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/3ef43ccc-6915-47d9-9f18-d33df73a764c">
+
                 
             - **이후** : 이 모든 로직들은 **DTO 내 Getter 메서드 호출할때 혹은 JSON → 객체 Deserialize 때로 이관**
                 - DTO 는 다음과 같다. 이를 기준으로 아래 순서에 따라 리팩토링 시도
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/6cfbe8fd-4800-465f-a252-9016e37f4c67/Untitled.png)
+                   <img width="878" alt="Untitled (27)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/d47b475b-bd29-42c6-a494-ac41c8db5d51">
+
                     
                 1. **Null 을 입력하지 않도록 막는 책임을 백엔드가 가져갈것인가, 프론트엔드가 가져갈것인가?**
                     - **프론트엔드가 가져간다면**, 백엔드는 **@NotNull 로 절대 Null 이어서는 안된다는 조건을 추가**
@@ -1259,16 +1286,19 @@
                                 
                                 아래와 같이 @Valid 를 꼭 넣어주어야한다.
                                 
-                                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/3f1d628b-fddc-48e8-b5ad-0fa032d29f92/Untitled.png)
+                                <img width="878" alt="Untitled (27)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/9cec0a57-9d6b-43c0-8700-656015d6a123">
+
                                 
                         2. **Get 메서드 호출 시 Validation 처리하여 반환**
                             - 예시 코드 : @Override 를 통해 @Getter 로 생성되는 자동 Getter 메서드를 재정의
                                 
-                                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/d3ceb5d6-d502-4b19-b395-253bbbae9d54/Untitled.png)
+                                <img width="673" alt="Untitled (33)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/1fd1edfe-505f-46c9-be0d-28c753e5a193">
+
                                 
                 - **결과적으로는 아래와 같이 Null 및 Validation 처리 로직이 모두 사라짐**
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/d620d2cb-3337-4eeb-810f-82c9088299bf/Untitled.png)
+                   <img width="878" alt="Untitled (34)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/199428be-bfea-45eb-b4e7-d93531a9d3a3">
+
                     
         
         ### Exception 공통 처리
@@ -1282,7 +1312,8 @@
                 - **이전 :** 이를 처리하기 위해서 일반적으론 @Controller 내 try-catch 구문으로 방어하게된다.
                     - 만약 @Controller 로 정의된 API 메서드가 수백개면? **똑같은 try-catch 구문을 수백개 작성**
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/2ed0d7bb-d855-4f65-8c9c-baf6e7fe1c20/Untitled.png)
+                    <img width="590" alt="Untitled (35)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/07ed59d2-5b81-4945-8ea7-7be85513df0b">
+
                     
                 - **이후** : @ControllerAdvice 와 @ExceptionHandler 를 통해 try-catch 를 대신/중앙화
                     - @ExceptionHandler 는 어떤 Exception 을 받아서 처리할지 개별 정의가 가능
@@ -1301,7 +1332,8 @@
                     - **추가 2)** @ResponseBody + @ControllerAdvice = **@RestControlerAdvice**
                     - **추가 3)** @ControllerAdvice 내 파라미터를 통해 특정 패키지 내 @Controller 에만 적용가능
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/1c041b01-5bbe-44f9-940e-b08bf1f5aa34/Untitled.png)
+                   <img width="860" alt="Untitled (36)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/b530454e-8c59-4426-9a19-76b15567ada1">
+
                     
         
         ### 프론트엔드에게 혹은 API 반환 시 일관된 객체(JSON) 형태로 반환하기
@@ -1319,18 +1351,21 @@
                 - 백엔드에서 발생한 에러에 대한 메세지를 다원화하기 어렵다.
                     - 제대로 HTTP Status 반환한다해도, 유저에게 HTTP Status 기반의 에러 메세지만 발행 가능
             
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/edcb1add-51bc-49b0-9812-7783f2875b69/Untitled.png)
+           <img width="841" alt="Untitled (37)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/4278f8f8-6dbb-4842-845a-f80bbb923894">
+
             
         - **이후** : @Controller 및 @ExceptionHandler 모두 동일한 **RequestResult<T>** 라는 객체를 반환
             - **백엔드** : Exception 에 따른 메세지를 다원화 가능, 성공/실패에 대한 간단한 정적 팩토리 메서드 활용
             - **프론트엔드** : (무지성으로) 백엔드가 보내준 RequestResult 를 통한 에러메세지 및 반환값 간단 처리
                 - 프론트엔드는 정말 아무것도 신경쓰지 않고, 화면에 오롯이 집중할 수 있다.
             
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/7ef42aec-775e-4bfd-8175-0080c1a2c5a5/Untitled.png)
+            <img width="811" alt="Untitled (38)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/73a6e8ef-e9ea-4526-8880-f5a23f673eb7">
+
             
             - 아래는 @ControllerAdvice 내 @ExceptionHandler 에서 실패시의 RequestResult 반환
             
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/a3bb0ac2-4197-4d63-ad2f-be6c3d696028/Untitled.png)
+           <img width="865" alt="Untitled (39)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/12450fc3-df08-4770-a585-bb1258b3d59b">
+
             
         
         ### DTO 나 Controller 만들때 @FieldDefaults 사용하면 깔끔
@@ -1364,10 +1399,11 @@
             - **2차 캐시 : SessionFactory-level Cache** (WAS 뜨고, 지는 시간안에 생존 = 어플리케이션 레벨)
             - 1차 및 2차 캐시의 차이점에 대해 **이해가 쉬운 그림 설명**
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/663e8649-8785-4e76-9817-52721360e9f6/Untitled.png)
+                ![Untitled (40)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/0f5c103e-10c2-45c3-873e-f5d7623f8c0a)
+
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/0e102981-b4aa-4c4e-8fa7-99621128d0b5/Untitled.png)
-                
+                ![Untitled (41)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/165ba18e-0c63-44c0-be77-451419100085)
+
         - 2차 캐시 사용을 위해서는 아래 절차를 따라 설정 (Spring Cache 에 대한 설명 - **[참조 1](https://adjh54.tistory.com/165)**, **[참조 2](https://jiwondev.tistory.com/282)**, **[참조 3](https://mangkyu.tistory.com/179)**)
             1. ****@EnableCaching 설정****
                 
@@ -1515,11 +1551,11 @@
             - **Filter** : Tomcat 은 WAS 이니 **정적리소스 반환** 등의 WS 처리도 수행, Filter 는 여기까지 적용
             - **Interceptor** : Spring Controller (Handler) 요청, 반환에 대해서만 Interceptor 적용
 
-  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/923d44c9-d91b-4fd0-bcd4-ea268a79b814/Untitled.png)
+  ![Untitled (42)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/19f71239-cce0-4fd9-884a-93b20304a138)
 
     - 더 상세한 그림 :  (이해하는데에 참조)
 
-      ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/0cf68f07-23fb-4ca0-a62f-89763e718280/Untitled.png)
+      ![Untitled (43)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/3c6b77c4-20a5-4795-9181-7f3a98272071)
 
 
     ### 2.1. Filter ← Tomcat (Servlet Container)
@@ -1688,13 +1724,16 @@
     - **(그림 1)** Filter 는 Servlet Container 가 관리, Interceptor 는 Spring Container 가 관리하던 시절
         1. (Application)**FilterChain** : WAS(Tomcat, Servlet Container) 에서 관리하는 필터 체인
     
-    !https://user-images.githubusercontent.com/1817625/155494265-f606005f-4383-4688-926e-99f0637d636f.png
+   ![image](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/95cbd023-1742-4613-93ac-03bc184a356a)
+
     
     - **(그림 2)** Filter 도 Spring Container 가 관리가능하던 시절 (DelegatingFilterProxy)
         
-        !https://user-images.githubusercontent.com/1817625/155494292-9789207b-d720-4ba1-80c8-e407bdadd046.png
+        ![image (1)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/9a4e5e69-f96c-41bf-ad4a-27a8701698c3)
+
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/d456a2c2-ddf0-40c8-98a7-4c03e0b9665e/Untitled.png)
+       ![Untitled (46)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/402daf30-142e-448c-9da4-bac7545bf447)
+
         
         1. (Application)**FilterChain** : WAS(Tomcat, Servlet Container) 에서 관리하는 필터 체인
             - Servlet 관할의 (Application)FilterChain 에서 Spring Bean Filter 쓰고싶다면
@@ -1706,24 +1745,28 @@
                         - FilterChainProxy 가 DelegatingFilterProxy 한테 위임받음
                     - **단일 FilterChainProxy** 내부에 ⇒ **다수 SecurityFilterChain 리스트**
                         
-                        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/03823bd3-f11c-410f-8609-ca78d780f007/Untitled.png)
+                        <img width="794" alt="Untitled" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/e0ecb38c-a643-48cc-99db-ad36283eef11">
+
                         
                         - Spring Security 에서 제공하는 **SecurityFilterChain 도식**
                         
-                        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/d71135b2-6a58-4c76-8aec-f206be6f3790/Untitled.png)
+                        ![Untitled (1)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/f9a53d08-bb8e-495c-b2fc-91f810c8f529)
+
                         
                     - **단일 SecurityFilterChain** 내부에 ⇒ **다수 GenericFilterBean(Filter) 리스트**
                         - `matches()` 와 `getFilters()` 라는 2개의 메서드를 가진 인터페이스
                             - `**matches**` : 실제 요청에 따른 SecurityFilterChain 적용 여부
                             - `**getFilters**` : 매칭되었을 때 수행될 필터들의 목록
                         
-                        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/faf7bd0f-46ca-444b-823a-3512474da3c6/Untitled.png)
+                        <img width="604" alt="Untitled (2)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/6ff417bb-dd8a-4e64-83f4-56ed38a24565">
+
                         
                     - **다수 GenericFilterBean(Filter) 리스트** 중 유명한것
                         
                         = **UsernamePasswordAuthenticationFilter**
                         
-                        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/d1e4a997-9f5a-4e63-a3d5-2ebba8742007/Untitled.png)
+                       <img width="780" alt="Untitled (4)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/6cd97fdd-87cc-42d7-b2c2-31019c5b9d26">
+
                         
                         - 그 외 정말 다양한것들이 존재한다.
                             - UsernamePasswordAuthentication**Filter**
@@ -1794,13 +1837,15 @@
     
     - **수업시간에 진행했던 도식** : 다 학습한 후 본 도식을 통해 깔끔하게 머릿속을 정리하자 (복습하자)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/1a7bbf4b-486f-4ba5-a2b6-1fa038a3af88/Untitled.png)
+    ![Untitled (5)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/b328eada-a038-4474-924f-4d457743ad3f)
+
     
     - (추가 도식) 그리고나서 아래 도식을 보면, 도식 내 각 요소에 대해 이해가 될것이다
         - 하지만, 위에 “수업시간에 진행했던 도식” 만으로도 이해가 다 되었다면,
         - 굳이 아래 도식으로 머리를 복잡하게 하지 않아도된다. (근데 찾으면 이 그림만 나올것)
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/965c992a-1f89-4044-8c99-05c05e519a7f/Untitled.png)
+        ![Untitled (6)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/e1d7701b-36d2-41c9-8929-a997969312c5)
+
         
     
     계속 반복해서 귀에서 피가나겠지만, Spring Security 의 핵심은 SecurityFilterChain 이고, 그 내부에 Spring Security 가 제공하는 수많은 Filter 들이 존재한다. 이 Filter 중 **Authentication 인증** 부분만 떼어서 어떻게 동작하는지 보자. ⇒ **AuthenticationFilter 부터 시작하는 ~~신나는~~ 모험**
@@ -1825,14 +1870,15 @@
                     - **Authenticated** : boolean 타입의 인증 여부를 저장합니다.
         - **Authentication 은 다음과 같은 순서대로 인증이 진행된다 : Filter → Manager → Provider**
             
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/0a690055-b221-47ef-a1c7-8a61da3acf28/Untitled.png)
+            ![Untitled (7)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/e2ee577f-4eb9-470b-a181-2f2e54127320)
+
             
         1. **AuthenticationFilter** : **AuthenticationToken** 생성 및 저장 주체
             - (1) **AuthenticationToken 생성** : 인증(검증)을 위한 객체 생성, 아직 미인증
             - (2) **AuthenticationToken 저장 : 1. SecurityContextHolder + 2. SecurityContext**
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/6b668f6a-87d0-4b5c-bf13-0ed7ee9e4a97/Untitled.png)
-                
+               ![Untitled (8)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/5339e0c6-f0d8-4a39-ae5d-2a005e22812c)
+
                 1. **SecurityContextHolder :** 지정된 보관 전략(모드)에 따라 **SecurityContext** 보관
                     - **기본적으로 ThreadLocal 을 사용** (모드 MODE_THREADLOCAL 사용시)
                         
@@ -1868,7 +1914,8 @@
                 - **Anonymous**AuthenticationFilter 등등..
         2. **AuthenticationManager** : **AuthenticationToken** 인증(검증) 방법 할당
             
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/0b6c8c0f-17ca-4dec-9780-f635591b9131/Untitled.png)
+           ![Untitled (9)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/945a52e6-6e30-4185-8cae-0e4399788531)
+
             
             - 구현체 : **ProviderManager**
                 - 수많은 AuthenticationProvider 중 적합한 AuthenticationProvider 찾아 Token 검증
@@ -1906,7 +1953,8 @@
     
     - 아래 그림을 보면 클라이언트에서 요청이 들어오면 (Application)FilterChain 을 지나가는 도중에 Spring Security 가 제공하는 (활성화된) SecurityFilterChain 을 거쳐가는것을 볼 수 있다. (**[참조](https://bitgadak.tistory.com/10)**)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/27c08457-e8bf-4e76-97d7-4d75fa20ed21/Untitled.png)
+    ![Untitled (10)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/94b5c098-1a4e-4f1c-8aed-c33a3f772e89)
+
     
     SecurityFilterChain 를 활성화하고, (Application)FilterChain 에 체결하기 위한 방법을 알아보자
     
