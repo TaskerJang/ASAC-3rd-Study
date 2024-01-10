@@ -82,7 +82,8 @@
                       >     = 결과적으로는 성공했었던 모든 예약 Rollback
               >
 
-              ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/4072a8a1-d406-4ac9-b4c0-8937c1694cc6/Untitled.png)
+             ![Untitled (18)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/18f5f3a8-acca-4eca-9031-665f5ab970e7)
+
 
             - **Transaction** 가 고신뢰성을 보장하기 위해선 **ACID** 특성을 필수로 가져야한다.
 
@@ -146,7 +147,8 @@
                     - 데이터 분석을 위해 사용, 빅데이터 쿼리 시 굉장히 빠른 결과 도출
                     - **단점** : SELECT * 하면 DB 가 멎는다, 굉장히 느린 Update (배치로 매번 리인덱싱)
 
-                  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/66ae522b-ab62-4a75-916a-ce2bfe783968/Untitled.png)
+                 ![Untitled (20)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/d1b90b06-6ae4-4352-889e-a81cde3357f6)
+
 
             - **CAP Theory** : 분산 시스템은 3개를 모두 보장할 수 없다. 최대 2개 보장 가능
 
@@ -164,17 +166,21 @@
         - **Partitioning** : 하나의 테이블을 여러 데이터로 쪼개어 저장하는것
             - **Vertical Partitioning** : 컬럼(열) 쪼개기
 
-              ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/5b9c6433-afae-48f6-88a2-992487c16bfd/Untitled.png)
+              ![Untitled (19)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/18c271a8-3647-46ca-a74f-4fa1f9f68cc4)
+
 
             - ****Horizontal**** **Partitioning** : 로우(행) 쪼개기
 
-              ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/e270acd9-00b2-465f-9ebe-528c1be962e2/Untitled.png)
+             ![Untitled (21)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/ac2b8619-ff5e-4f69-b6a4-1658d8e71290)
+
 
         - **Sharding** (Horizontal Partitioning) : 로우(행) 쪼개기
 
-          ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/2c5ff172-dd23-4653-b3b0-8e21c7cf35ce/Untitled.png)
+          ![Untitled (22)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/52f9e60c-b14a-4d9d-9a6e-ff7ac9595c8c)
 
-          ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/97f556a5-4f56-4915-b51f-f6ab104e595b/Untitled.png)
+
+         ![Untitled (23)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/36dd7135-3fbe-4c1a-ad2b-345dd7b400b4)
+
 
         - **Replication** : 같은 데이터를 여러 분산 노드에 동일하게 저장
             - 쓰기 담당 / 읽기 담당을 나누어, 쓰기 발생 시 읽기 담당에 모두 동기화를 맞춰야한다
@@ -200,7 +206,8 @@
                 - **Timestamp-based Concurrency Control**
                 - **Multiversion Concurrency Control** (MVCC)
 
-                  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/eae536d3-86c4-4d00-b681-e101e58de23f/Untitled.png)
+                 ![Untitled (26)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/9356fed6-d80a-4075-b2c1-4a44a90f9e6a)
+
 
 
     ### SQL 과 ORM
@@ -213,7 +220,8 @@
         - **Relationship : PK — FK**
             - **Notation (표기법**, 그 중 **Crow's Foot Notation)**
                 
-                ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/28c03e46-5e95-4f27-a3cd-40a371bb7c21/Untitled.png)
+               ![Untitled (27)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/49d64b06-8d35-46e9-8549-e6cfce1fd0ae)
+
                 
             - **Cadinality (관계 형태)** = Cadinality(최대) and Ordinality(최소)
                 - **1:1** → 예, 학생과 성적 : **특성** (**소유**, 한 Entity 의 입장에서)
@@ -236,33 +244,43 @@
                     > ***관계(Relation) = 테이블***
                     > 
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/71096ea2-c00b-4e55-bd91-9a413a52a7ed/Untitled.png)
+                    ![Untitled (24)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/97594d6e-6a0c-4dba-9b56-d8e58c631394)
+
                     
                     - 아래처럼 쪼개진다.
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/a80ec02d-810b-4e78-ae38-afbebb346f71/Untitled.png)
+                  ![Untitled (25)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/93a857a7-29b2-4fdb-a5e9-a674458c7d70)
+
+
                     
                 - **제 1 정규형** : 한 컬럼에 한 값
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/af053bbd-2238-463c-ac34-08f61d119bf8/Untitled.png)
+                    <img width="633" alt="Untitled (28)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/ddacbac5-0df7-4f71-8bbd-34349d5703ab">
+
                     
                 - **제 2 정규형** : 1 테이블 1 결정자 (완전 함수 종속)
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/f3cd8ec4-c641-464c-a826-979dc2aff50f/Untitled.png)
+                    ![Untitled (29)](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/14c6485a-7936-4bac-8d72-5d379ea5d684)
+
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/0cb8cefc-f069-4466-9723-e1f7c1e63443/Untitled.png)
+                    <img width="501" alt="Untitled (31)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/681f90ec-d1b0-4eaf-a3e1-05914b55dea7">
+
                     
                 - **제 3 정규형** : 같은 값(피결정)을 바라보는 결정자들 분리 (이행적 종속 분리)
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/230bb499-39dc-4ea6-8dbb-57a3ae3e2960/Untitled.png)
+                    <img width="956" alt="Untitled (32)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/f83c885c-bc0a-4fbc-b966-587802e24817">
+
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/4657afe0-ab44-4c62-a6ba-8808cf7b043a/Untitled.png)
+                   <img width="818" alt="Untitled (33)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/15c231d0-6f80-49d9-825a-f5e5d147315d">
+
                     
                 - **BCNF** : 모든 결정자가 후보키
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/c43ed081-acc8-4f16-9d90-9cb763de1f52/Untitled.png)
+                   <img width="956" alt="Untitled (34)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/2128af61-2d73-4562-9e5a-120b60a2177b">
+
                     
-                    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/cd689693-149b-44c4-a203-a4bc60086f78/50e2a9c4-aebb-47a7-91ff-52308ed74f19/Untitled.png)
+                    <img width="771" alt="Untitled (35)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/9b985a39-cf1d-4881-8b16-df0c3d684b67">
+
                     
         - **Denormalization 반/비정규화** : 관심사 및 ORM 활용도 측면에서 고려
     - **1) SQL (Structured Query Language)**
