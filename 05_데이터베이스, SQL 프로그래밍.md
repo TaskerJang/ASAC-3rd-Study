@@ -231,37 +231,37 @@ DB 표준 에러 (SQL Standard Error) 와 그걸 방지하기 위한 방책들
           
           ![Normalized Tables](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/93a857a7-29b2-4fdb-a5e9-a674458c7d70)
 
-        - **제 1 정규형**: 한 컬럼에 한 값
+       - # 제 1 정규형: 한 컬럼에 한 값
           
             <img width="633" alt="Untitled (1)" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/601cfd64-1a26-4337-ae0e-faa5cfcb2c8a">
 
 
-              # 제 2 정규형: 1 테이블 1 결정자 (완전 함수 종속)
+      - # 제 2 정규형: 1 테이블 1 결정자 (완전 함수 종속)
 
-![Table Image](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/14c6485a-7936-4bac-8d72-5d379ea5d684)
+           ![Table Image](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/14c6485a-7936-4bac-8d72-5d379ea5d684)
 
-<img width="501" alt="Image1" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/681f90ec-d1b0-4eaf-a3e1-05914b55dea7">
+           <img width="501" alt="Image1" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/681f90ec-d1b0-4eaf-a3e1-05914b55dea7">
 
-# 제 3 정규형: 같은 값(피결정)을 바라보는 결정자들 분리 (이행적 종속 분리)
+      - # 제 3 정규형: 같은 값(피결정)을 바라보는 결정자들 분리 (이행적 종속 분리)
 
-<img width="956" alt="Image2" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/f83c885c-bc0a-4fbc-b966-587802e24817">
+          <img width="956" alt="Image2" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/f83c885c-bc0a-4fbc-b966-587802e24817">
 
-<img width="818" alt="Image3" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/15c231d0-6f80-49d9-825a-f5e5d147315d">
+          <img width="818" alt="Image3" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/15c231d0-6f80-49d9-825a-f5e5d147315d">
 
-# BCNF: 모든 결정자가 후보키
+      - # BCNF: 모든 결정자가 후보키
 
-<img width="956" alt="Image4" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/2128af61-2d73-4562-9e5a-120b60a2177b">
+          <img width="956" alt="Image4" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/2128af61-2d73-4562-9e5a-120b60a2177b">
 
-<img width="771" alt="Image5" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/9b985a39-cf1d-4881-8b16-df0c3d684b67">
+          <img width="771" alt="Image5" src="https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/9b985a39-cf1d-4881-8b16-df0c3d684b67">
 
-- Denormalization 반/비정규화: 관심사 및 ORM 활용도 측면에서 고려
+        - Denormalization 반/비정규화: 관심사 및 ORM 활용도 측면에서 고려
 
-## 1) SQL (Structured Query Language)
+      ## 1) SQL (Structured Query Language)
 
-- 정의(DDL, Data Definition Language): 데이터 정의어 = Table 조작
-- 조작(DML, Data Manipulation Language): 데이터 조작어 = CRUD
-- Functions: DBMS마다 Date, String 등 조작을 위한 유용한 함수 제공
-  - DBMS마다 다르기 때문에 MySQL, MSSQL, PostgresQL 등 모두 다른 함수를 가짐
+    - 정의(DDL, Data Definition Language): 데이터 정의어 = Table 조작
+    - 조작(DML, Data Manipulation Language): 데이터 조작어 = CRUD
+    - Functions: DBMS마다 Date, String 등 조작을 위한 유용한 함수 제공
+    - DBMS마다 다르기 때문에 MySQL, MSSQL, PostgresQL 등 모두 다른 함수를 가짐
     - Function → 직접 함수를 만들 수도 있고
     - (Stored) Procedure → 직접 프로시져를 만들 수도 있다.
 
