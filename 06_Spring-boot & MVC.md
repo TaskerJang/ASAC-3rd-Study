@@ -254,16 +254,15 @@ Java는 **객체지향 프로그래밍 OOP** ⇒ **객체지향 = 분업화** �
                 }
                 ```
 
- Sure, here is the provided content formatted in Markdown with Korean:
 
-```markdown
+
 # Library 와 Framework 의 차이
 
 - **Library** : 개발자는 필요한 Library 들을 **선택하고, 연결하고, 설정하는** 모든걸 다 직접 해야함
 
    ![Library](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/d32083fd-0d63-4851-997b-dc8ff6c2915c)
 
-- **Framework** : 개발자가 직접 구현한것 혹은 Library 들을 **연결하고, 설정하는** 것들을 제공
+- **Framework** : 개발자가 직접 구현한 것 혹은 Library 들을 **연결하고, 설정하는** 것들을 제공
     - 그렇기때문에 Framework 는 개발자에게 **“비지니스 구현”** 만 신경쓰도록 만들 수 있는것
     
     ![Framework](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/fec6074c-bd9c-43b6-9d47-6a2ef22516e3)
@@ -334,15 +333,17 @@ Spring 은 **MVC 아키텍쳐 패턴** 과 **3 계층 아키텍쳐 패턴** 으�
 
     
 - **3 계층 아키텍쳐 패턴** : 상세 구현에서 관심사의 분리
-    - **Presentation Layer** : 앞서 설명한 MVC 아키텍쳐 패턴
-    - **Business Layer** : 위 이미지에서 Service, Repository 부분
+    - **Presentation Layer:** 앞서 설명한 MVC 아키텍쳐 패턴
+    - **Business Layer:** 위 이미지에서 Service, Repository 부분
         
         > *“Spring 프레임워크는 개발자에게 **“비지니스 구현”** 에만 신경쓰도록 한다.”*
         > 
         -
 
- 위 문장에서 ***“비지니스 구현”*** 에 해당하는 부분
-    - **Data Access Layer** : 비지니스 구현을 위한 데이터 조회와 같이 CRUD 제공
+ 위 문장에서 ***“비지니스 구현”*** 에 해당하는 부
+
+분
+    - **Data Access Layer:** 비지니스 구현을 위한 데이터 조회와 같이 CRUD 제공
 
 # Spring 에서의 **MVC 아키텍쳐 패턴 상세 설명**
 
@@ -387,37 +388,6 @@ Spring 은 **MVC 아키텍쳐 패턴** 과 **3 계층 아키텍쳐 패턴** 으�
             
 - **Front Controller** 상세 흐름 (Spring)
     1. EC2 서버에서 Tomcat 이 처음 구동될때 2개의 Container 가 생성된다.
-        
-        > *참고 : **Container = Context** 라고 생각하는것이 이해에 편하다*
-        > 
-        - **Servlet Container (ServletContext)**
-            - 가장 먼저, ServletContext 이 생성됨
-            - ServletContextListener 이 실행됨
-                - 아래 Spring Container (ApplicationContext) 생성
-        - **Spring Container (ApplicationContext)**
-            - 하나로 표현하긴했지만, 실제로는 2개의 계층으로 이뤄져있다. ([**추가 설명](https://jaehun2841.github.io/2018/10/21/2018-10-21-spring-context/#Web-Application-Context), [2](https://yeoooo.github.io/spring/day23/)**)
-                - Servlet Web**ApplicationContext** (구 servlet-context.xml)
-                    
-                    > Servlet 에서만 사용하는 Bean
-                    > 
-                    - HandlerMapping
-                    - ViewResolver
-                    - @Controller Beans 등
-                - Root Web**ApplicationContext** (구 root-context.xml)
-                    
-                    > 인프라, 비지니스 서비스 등 공통 Bean
-                    > 
-                    - @Service
-                    - @Repository
-                    - @Compoentn
-                    - @Configuration 등
-                
-                ![Containers](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/e76c02fb-0f20-439c-8001-6a32097fc67f)
-
-                
-                ![Containers2](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/a81fe6a7-93c3-4292-9d3a-1aae437cef59)
-
-                
     2. Tomcat 및 Container 들이 모두 생성된 뒤에는 클라이언트 요청을 받을 수 있다.
     3. 클라이언트 요청에 따라 Tomcat 은 정적 페이지가 존재하는지 확인
     4. 정적 페이지가 존재하지않는다면, **Servlet Container** 가 요청을 받아 **Servlet** 할당
@@ -467,6 +437,7 @@ Spring 은 **MVC 아키텍쳐 패턴** 과 **3 계층 아키텍쳐 패턴** 으�
         - JSP, Thymeleaf 등 다양한 형태, 현재 Spring 표준은 **Thymeleaf**
     - **Client-side Template Engine:**
         - React, Vue 등
+
 
 ## 3-Layered Architecture
 
