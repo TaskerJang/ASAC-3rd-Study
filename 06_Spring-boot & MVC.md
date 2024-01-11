@@ -482,7 +482,6 @@ Java는 JVM 위에서 동작하는 어플리케이션, DB는 개별적인 시스
 - **객체-DB 조작:** Entity 객체에 대한 간접 DB 조작을 통해 데이터 조작
     - **ORM (Object-Relational Mapping)**
 
-```markdown
 ### 1. DB 연결: JDBC Driver
 
 Java가 DB를 사용하기 위해 가장 먼저 필요한 것은 Java Application과 DB를 연결하는 것입니다.
@@ -629,9 +628,6 @@ public int count() throws SQLException {
         - JDBC, Hibernate, JPA 등 너무 다양한 글로벌 트랜잭션 API들 **모두 추상화**
         - **@PlatformTransactionManager을 통해 → 트랜잭션 경계 설정**
     
-  해당 텍스트를 마크다운으로 변환하면 다음과 같습니다:
-
-```markdown
 # 객체-DB 조작 : ORM → JPA (Java 표준 명세 API)
 
 앞선 JDBC (APIs 그리고 Template 모두) 처럼 DB 를 직접적으로 사용한다면 아래의 불편함을 마주할 것
@@ -760,10 +756,6 @@ DB 의 **“관계형 모델”** 과 **Java** 의 **“객체 모델”** 을 �
             - tx.**rollback**() : 작업에 문제가 생겼을 시
     
     
-    
-   Certainly! Here's the content converted to Markdown:
-
-```markdown
 ## JPA 장점:
 
 결과적으로, JPA 을 활용한다면 개발자는 아래의 이점을 갖게 된다.
@@ -1091,7 +1083,6 @@ Entity 클래스 앞에 Q 가 붙은 이름을 갖는다. (User Entity 객체는
 
                     
         
-    ```markdown
 # 예외 공통 처리
 
 `@RequestBody` DTO 객체나 `@Valid` 또는 `@Secured`와 같이 추상화된 처리는 로직 내에서 처리할 수 없습니다.
@@ -1219,9 +1210,6 @@ public class PostService {
 
 스프링은 AOP 방식으로 편리하게 메서드에 캐시 서비스를 적용하는 기능을 제공합니다. [참조 1](https://adjh54.tistory.com/165), [참조 2](https://jiwondev.tistory.com/282), [참조 3](https://mangkyu.tistory.com/179)
 
-       Certainly! Here is the markdown version of the provided content:
-
-```markdown
 ## 캐시 서비스와 AOP
 
 - **캐시 서비스는 트랜잭션과 마찬가지로 AOP를 이용해 메소드 실행 과정에 투명하게 적용**
@@ -1399,10 +1387,6 @@ public class CustomRequestFilter implements Filter {
 
 
             
-    
-   물론입니다! 아래는 제공된 내용의 한글 버전입니다:
-
-```markdown
 ### 2.2. Interceptor ← Spring (Spring Container)
 
 - Spring Framework 스펙에 정의
@@ -1717,9 +1701,6 @@ SecurityFilterChain 를 활성화하고, (Application)FilterChain 에 체결하�
            }
            ```
                         
-                    Sure, here's the provided content converted into Markdown:
-
-```markdown
 ## 예시 3) **“LDAP”** 기반 (Lightweight Directory Access Protocol, 분산 디렉토리)
 
 ```java
