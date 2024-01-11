@@ -197,7 +197,7 @@ DB 표준 에러 (SQL Standard Error) 와 그걸 방지하기 위한 방책들
 
 ## SQL 과 ORM
 
-# 0) ERD 설계 (Entity Relationship Diagram) 및 정규화 (Normalization)
+# 1) ERD 설계 (Entity Relationship Diagram) 및 정규화 (Normalization)
 
 > 개체-관계 모델. 테이블간의 관계를 설명해주는 다이어그램. 모델 구조도.
 > 
@@ -256,7 +256,7 @@ DB 표준 에러 (SQL Standard Error) 와 그걸 방지하기 위한 방책들
 
         - Denormalization 반/비정규화: 관심사 및 ORM 활용도 측면에서 고려
 
-      ## 1) SQL (Structured Query Language)
+      ## 2) SQL (Structured Query Language)
 
     - 정의(DDL, Data Definition Language): 데이터 정의어 = Table 조작
     - 조작(DML, Data Manipulation Language): 데이터 조작어 = CRUD
