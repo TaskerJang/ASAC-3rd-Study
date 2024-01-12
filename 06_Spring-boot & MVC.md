@@ -1619,9 +1619,7 @@ Filter**
 
 2. **AuthenticationManager** : **AuthenticationToken** 인증(검증) 방법 할당
 
-![AuthenticationManager
-
- 도식](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/945a52e6-6e30-4185-8cae-0e4399788531)
+![AuthenticationManager도식](https://github.com/TaskerJang/ASAC-3rd-Study/assets/124780552/945a52e6-6e30-4185-8cae-0e4399788531)
 
    - 구현체 : **ProviderManager**
      - 수많은 AuthenticationProvider 중 적합한 AuthenticationProvider 찾아 Token 검증
